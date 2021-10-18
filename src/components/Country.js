@@ -36,7 +36,11 @@ const Country = (props) => {
 };
 
 Country.propTypes = {
-  country: PropTypes.shape.isRequired,
+  country: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    today_confirmed: PropTypes.number.isRequired,
+  }).isRequired,
   index: PropTypes.number.isRequired,
 };
 

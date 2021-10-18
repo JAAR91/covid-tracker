@@ -4,8 +4,11 @@ import { useParams } from 'react-router-dom';
 function Details() {
   const params = useParams();
   const { id } = params;
-  const country = Object.values(useSelector((state) => state.countries))
-    .find((country) => country.id === id);
+  const countries = useSelector((state) => state.countries);
+  let country = null;
+  if (countries) {
+    country = Object.values(countries).find((country) => country.id === id);
+  }
 
   return (
     <div className="container-fluid light-magenta mt-3 px-0">
@@ -27,37 +30,37 @@ function Details() {
           <li>
             <p className="text-white">
               New confirm:
-              { country.today_new_confirmed }
+              { country ? country.today_new_confirmed : '0'}
             </p>
           </li>
           <li>
             <p className="text-white">
               New deaths:
-              { country.today_new_deaths }
+              { country ? country.today_new_deaths : '0' }
             </p>
           </li>
           <li>
             <p className="text-white">
               New recovered:
-              { country.today_new_recovered }
+              { country ? country.today_new_recovered : '0' }
             </p>
           </li>
           <li>
             <p className="text-white">
               Open Cases:
-              { country.today_open_cases }
+              { country ? country.today_open_cases : '0' }
             </p>
           </li>
           <li>
             <p className="text-white">
               New Open Cases:
-              { country.today_new_open_cases }
+              { country ? country.today_new_open_cases : '0' }
             </p>
           </li>
           <li>
             <p className="text-white">
               Source:
-              { country.source }
+              { country ? country.source : '0' }
             </p>
           </li>
         </ul>

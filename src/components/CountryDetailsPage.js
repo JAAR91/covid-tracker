@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import countryLink from '../countryName';
 import Loading from './Loading';
+import CityList from './cityList';
 
 function Details() {
   const params = useParams();
@@ -50,6 +51,7 @@ function Details() {
             </p>
           </li>
         </ul>
+        <CityList />
       </div>
     );
   }

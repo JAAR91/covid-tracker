@@ -13,11 +13,9 @@ function Home() {
       <div className="d-flex flex-row justify-content-center align-items-center p-0">
         <img alt="" src={worldImg} className="world-img m-0" />
         <div>
-          <h1 className="m-0">World</h1>
-          <p>
-            Infections:
-            {' '}
-            {Number(useSelector((state) => state.totalConfirmed)).toLocaleString()}
+          <h1 className="m-0 text-white">World</h1>
+          <p className="text-white">
+            {`Infections: ${Number(useSelector((state) => state.totalConfirmed)).toLocaleString()}`}
           </p>
         </div>
       </div>
@@ -25,6 +23,7 @@ function Home() {
         <Filter setFilter={setFilter} />
       </div>
       <div className="row pointer mt-1 p-0 intense-magenta">
+        <p className="col-12 light-magenta my-0 text-white">Infected by Country:</p>
         <CountryList countries={countries} filter={filter} />
       </div>
     </div>

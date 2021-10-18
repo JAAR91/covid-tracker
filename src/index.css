@@ -52,3 +52,12 @@ body {
 .world-img {
   width: 180px;
 }
+
+.country-image {
+  height: 80px;
+  width: 80px;
+}
+
+.no-underline {
+  text-decoration: none;
+}

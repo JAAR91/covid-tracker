@@ -7,9 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min';
 import App from './App';
 import store from './redux/StoreSetUp';
-import { fetchApiData } from './redux/covid/Covid';
+import { fetchData } from './redux/covid/Covid';
 
-store.dispatch(fetchApiData);
+store.dispatch(fetchData());
 
 ReactDOM.render(
   <React.StrictMode>

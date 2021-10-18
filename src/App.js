@@ -1,7 +1,7 @@
 import {
   Route, Switch,
 } from 'react-router-dom';
-import Details from './components/DetailsPage';
+import Details from './components/CountryDetailsPage';
 import Home from './components/HomePage';
 import NavBar from './components/NavBar';
 

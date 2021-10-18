@@ -1,22 +1,46 @@
 export const FETCH_API_DATA = 'data/FETCH_API_DATA';
-
 const LOAD_DATA = 'countries/LOAD_DATA';
+
 const initialState = {};
 
-const loadData = (payload) => ({
+export const loadData = (payload) => ({
   type: LOAD_DATA,
   payload,
 });
 
-export const fetchApiData = async (dispatch) => {
-  const currentDate = new Date().toISOString().slice(0, 10);
-  await fetch(`https://api.covid19tracking.narrativa.com/api/${currentDate}`)
-    .then((response) => response.json())
-    .then((data) => {
-      const totalConfirmed = data.total.today_confirmed;
-      const { countries } = data.dates[currentDate];
-      dispatch(loadData({ countries, totalConfirmed }));
-    });
+export const fetchData = (payload) => ({
+  type: FETCH_API_DATA,
+  payload,
+});
+
+const getDate = (store, action) => {
+  let ans = new Date().toISOString().slice(0, 10);
+  if (store.getState() !== initialState) {
+    ans = store.getState().dataDate;
+  }
+  if (action.payload) {
+    ans = action.payload;
+  }
+  return ans;
+};
+
+export const fetchApiData = (store) => (next) => (action) => {
+  const dataDate = getDate(store, action);
+  let ans = loadData({ dataDate });
+  switch (action.type) {
+    case FETCH_API_DATA:
+      fetch(`https://api.covid19tracking.narrativa.com/api/${dataDate}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const totalConfirmed = data.total.today_confirmed;
+          const { countries } = data.dates[dataDate];
+          return next(loadData({ countries, totalConfirmed, dataDate }));
+        });
+      break;
+    default:
+      ans = loadData({ dataDate });
+  }
+  return next(ans);
 };
 
 const reducer = (state = initialState, action) => {

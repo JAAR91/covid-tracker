@@ -1,13 +1,10 @@
 import Country from './Country';
+import Loading from './Loading';
 
 const CountryList = (props) => {
   const { countries, filter } = props;
 
-  let ans = (
-    <div className="d-flex justify-content-center align-items-center min-height">
-      <div className="spinner" />
-    </div>
-  );
+  let ans = (<Loading />);
 
   if (countries) {
     ans = Object.values(countries).filter(({ name }) => (

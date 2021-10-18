@@ -6,7 +6,7 @@ import { FaAngleLeft, FaMicrophone } from 'react-icons/fa';
 const NavBar = () => {
   const { pathname } = useLocation();
   return (
-    <header className="py-2">
+    <header className="py-2 shadow">
       <nav className="px-4 text-white intense-magenta d-flex justify-content-between">
         <Link to="/" className="text-decoration-none text-white fw-bold d-flex align-items-center justify-content-center">
           { pathname !== '/'

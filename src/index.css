@@ -48,3 +48,7 @@ body {
 .delete-shadow:focus {
   box-shadow: none;
 }
+
+.world-img {
+  width: 180px;
+}

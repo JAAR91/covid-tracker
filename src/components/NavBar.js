@@ -8,7 +8,11 @@ const NavBar = () => {
   return (
     <header className="py-2 px-0 shadow">
       <nav className="px-4 text-white intense-magenta d-flex justify-content-between">
-        <Link to="/" className="text-decoration-none text-white fw-bold d-flex align-items-center justify-content-center">
+        <Link
+          to="/"
+          className="text-decoration-none text-white fw-bold d-flex align-items-center justify-content-center"
+          data-testid="backButton"
+        >
           { pathname !== '/'
             ? (
               <>

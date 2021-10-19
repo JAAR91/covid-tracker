@@ -5,7 +5,7 @@ import CityInfo from './cityInfo';
 const CityList = (props) => {
   const { country } = props;
   const cities = country.regions;
-  let ans = (<p className="text-white text-center intense-magenta py-3 m-0">No cityes information found!</p>);
+  let ans = (<p className="text-white text-center intense-magenta py-3 m-0">No cities information found!</p>);
   if (cities.length > 0) {
     ans = (
       <div className="row m-0 p-0">

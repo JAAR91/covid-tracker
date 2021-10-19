@@ -26,7 +26,6 @@ const getDate = (store, action) => {
 
 export const fetchApiData = (store) => (next) => (action) => {
   const dataDate = getDate(store, action);
-  let ans = loadData({ dataDate });
   switch (action.type) {
     case FETCH_API_DATA:
       fetch(`https://api.covid19tracking.narrativa.com/api/${dataDate}`)
@@ -38,9 +37,9 @@ export const fetchApiData = (store) => (next) => (action) => {
         });
       break;
     default:
-      ans = loadData({ dataDate });
+      return next(action);
   }
-  return next(ans);
+  return next(loadData({}));
 };
 
 const reducer = (state = initialState, action) => {

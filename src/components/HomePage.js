@@ -22,8 +22,8 @@ function Home() {
       <div className="col-12 p-2 m-0 intense-magenta">
         <Filter setFilter={setFilter} />
       </div>
-      <div className="row pointer p-0 m-0 intense-magenta">
-        <p className="col-12 light-magenta my-0 text-white">Infected by Country:</p>
+      <p className="col-12 light-magenta my-0 text-white text-center">Infected by Country:</p>
+      <div className="row pointer p-0 m-0 intense-magenta" id="CountryList">
         <CountryList countries={countries} filter={filter} />
       </div>
     </div>

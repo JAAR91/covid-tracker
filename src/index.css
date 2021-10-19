@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Arimo";
+  src: url("./img/Arimo-Regular.ttf") format("ttf");
+}
+
 :root {
   --light-magenta: #f53d84;
   --intense-magenta: #c22f6c;

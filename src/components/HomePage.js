@@ -13,7 +13,7 @@ function Home() {
       <div className="d-flex flex-row justify-content-center align-items-center p-0 m-0">
         <img alt="" src={worldImg} className="world-img m-0" />
         <div>
-          <h1 className="m-0 text-white">World</h1>
+          <h1 className="m-0 text-white fw-bold">World</h1>
           <p className="text-white">
             {`Infections: ${Number(useSelector((state) => state.totalConfirmed)).toLocaleString()}`}
           </p>

@@ -20,7 +20,7 @@ const CityInfo = (props) => {
         className="d-flex justify-content-between align-items-center w-100 border-0 bg-transparent text-white"
         onClick={hideInfo}
       >
-        <p className="fs-4 m-0">{name}</p>
+        <p className="fs-5 m-0 fw-bold">{name}</p>
         <p className="m-0">{`Confirmed: ${confirmed || 0}`}</p>
       </button>
       <div

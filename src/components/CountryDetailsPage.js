@@ -7,7 +7,7 @@ import CityList from './cityList';
 function Details() {
   const params = useParams();
   const { id } = params;
-  const countries = useSelector((state) => state.countries);
+  const { countries, dataDate } = useSelector((state) => state);
   let ans = (<Loading />);
   if (countries) {
     const country = Object.values(countries).find((country) => country.id === id);
@@ -25,33 +25,34 @@ function Details() {
             </p>
           </div>
         </div>
-        <ul className="col-12 intense-magenta">
+        <ul className="col-12 intense-magenta m-0">
           <li className="row m-0 w-100 py-2">
-            <p className="text-white col-6">
+            <p className="text-white col-6 m-0">
               { `New Confirmed: ${country ? country.today_new_confirmed : '0'}`}
             </p>
-            <p className="text-white col-6">
+            <p className="text-white col-6 m-0">
               { `New deaths: ${country ? country.today_new_deaths : '0'}` }
             </p>
           </li>
           <li className="row m-0 col-6 w-100">
-            <p className="text-white col-6">
+            <p className="text-white col-6 m-0">
               { `New recovered: ${country ? country.today_new_recovered : '0'}` }
             </p>
-            <p className="text-white col-6">
+            <p className="text-white col-6 m-0">
               { `Open Cases: ${country ? country.today_open_cases : '0'}` }
             </p>
           </li>
           <li className="row m-0 w-100">
-            <p className="text-white col-6">
+            <p className="text-white col-6 m-0">
               { `New open cases: ${country ? country.today_new_open_cases : '0'}` }
             </p>
-            <p className="text-white col-6">
+            <p className="text-white col-6 m-0">
               { `Source: ${country ? country.source : '0'}` }
             </p>
           </li>
         </ul>
-        <CityList />
+        <p className="text-white m-0 text-center">{`To date: ${dataDate}`}</p>
+        <CityList country={country} />
       </div>
     );
   }

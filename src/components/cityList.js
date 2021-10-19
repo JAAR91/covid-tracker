@@ -1,13 +1,9 @@
 import { React } from 'react';
-import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import CityInfo from './cityInfo';
 
-const CityList = () => {
-  const params = useParams();
-  let { id } = params;
-  id = id[0].toUpperCase() + id.slice(1, id.length);
-  const country = useSelector((store) => store.countries[id]);
+const CityList = (props) => {
+  const { country } = props;
   const cities = country.regions;
   let ans = (<p className="text-white text-center">No cityes information found!</p>);
   if (cities.length > 0) {
@@ -17,8 +13,8 @@ const CityList = () => {
           <div
             key={city.id}
             className={`
-          col-6 no-underline m-0 text-white text-end
-          ${([1, 0, 0, 1][index % 4]) === 0 ? 'intense-magenta' : 'light-magenta'}
+          col-12 no-underline m-0 text-white py-3 px-1
+          ${(index % 2) === 0 ? 'intense-magenta' : 'light-magenta'}
         `}>
             <CityInfo city={city} />
           </div>
@@ -26,6 +22,12 @@ const CityList = () => {
       </div>
     );
   }
+
+  CityList.prototype = {
+    country: PropTypes.shape({
+      regions: PropTypes.shape.isRequired,
+    }),
+  };
 
   return ans;
 };

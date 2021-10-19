@@ -1,10 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Covid Tracker
+# Covid Tracker(For cellphone only)
 
 App that allows you to keep track of the covid-19 pandemic by country and by date. You can check information by contry and some countries contain information for city. The App contain a easy way to find a country with a search input and also an option to change the date.
 
-The app consist of 2 pages. Home that shows you all the countries and details page that shows each country and city information.
+The app consist of 2 pages. Home that shows you all the countries and details page that shows each country and city information. The app design is meant for cellphones.
 
 Original design idea by: [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 

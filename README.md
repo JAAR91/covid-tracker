@@ -1,72 +1,91 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Covid Tracker
+
+App that allows you to keep track of the covid-19 pandemic by country and by date. You can check information by contry and some countries contain information for city. The App contain a easy way to find a country with a search input and also an option to change the date.
+
+The app consist of 2 pages. Home that shows you all the countries and details page that shows each country and city information.
+
+Original design idea by: [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
 Flag pictures are from website [www.countryflags.io](https://www.countryflags.io/)
 
-## Available Scripts
+![screenshot](./src/img/HomePage.png)  ![screenshot](./src/img/DetailsPage.png)
 
-In the project directory, you can run:
+## Built With
 
-### `npm start`
+- JavaScript
+- HTML & CSS
+- Bootstrap
+- Webpack
+- Jest testing framework
+- Git and Github pages
+- VSCode
+- Linter Checkers
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Deployment Live Demo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Deployed with Heroku
+  - [Live Demo](https://jaarcovidtracker.herokuapp.com/)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get a local copy up and running follow these simple example steps.
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- IDE to edit and run the code (We use Visual Studio Code 🔥).
+- [Node.js](https://nodejs.org/en/download/) already downloaded.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get a local copy up and running follow these simple example steps.
+- Open terminal
+- Clone this project using the command
+```
+git clone https://github.com/JAAR91/covid-tracker.git
+```
+- Select the folder
+```
+cd covid-tracker
+```
+- To install all project dependencies run:
+```
+npm install
+```
+- To start the local server run:
+```
+npm start
+```
 
-### `npm run eject`
+## Authors 👤 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+👨‍💻 **Jose Alberto Arriaga Ramos**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- GitHub: [@jaarkira](https://github.com/jaarkira )
+- Twitter: [@91_jaar](https://twitter.com/91_jaar )
+- LinkedIn: [Jose Arriaga](https://www.linkedin.com/in/jaar/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🤝 Contributing
 
-## Learn More
+Contributions, issues, and feature requests are welcome!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Feel free to check the [issues page](https://github.com/DanSam5K/Webflix-Index/issues).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Show your support
 
-### Code Splitting
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Hat tip to anyone whose code was used 🔰
+- Inspiration 💘
+- Microverse program ⚡
+- Our standup team 🏹
+- Our family's support 🙌
 
-### Making a Progressive Web App
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./LICENSE) licensed.

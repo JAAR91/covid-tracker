@@ -14,12 +14,14 @@ const Country = (props) => {
       ${([1, 0, 0, 1][index % 4]) === 0 ? 'intense-magenta' : 'light-magenta'}
     `}
     >
-      <div className="d-flex flex-row justify-content-between m-0 p-0 text-decoration-none">
+      <div
+        className="d-flex flex-row justify-content-between m-0 p-0 text-decoration-none align-items-center"
+      >
         <img alt="" src={countryLink(country.name).toLowerCase()} className="country-image" />
         <div className="text-end m-0 p-0">
           <BsArrowRightCircle />
-          <h5 className="m-0 text-end fw-bold fs-6 text-wrap">{country.name}</h5>
-          <p className="text-end m-0">
+          <h5 className="m-0 text-end fw-bold fs-6 text-wrap mt-1">{country.name}</h5>
+          <p className="text-end mx-0 mb-3">
             {Number(country.today_confirmed).toLocaleString()}
           </p>
         </div>

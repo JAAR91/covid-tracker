@@ -58,7 +58,7 @@ npm install
 npm start
 ```
 
-### Install
+### Run Test Locally
 To run all the test, type on the terminal:
 ```
 npm run test

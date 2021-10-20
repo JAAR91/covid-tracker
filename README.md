@@ -58,6 +58,12 @@ npm install
 npm start
 ```
 
+### Install
+To run all the test, type on the terminal:
+```
+npm run test
+```
+
 ## Authors 👤 
 
 👨‍💻 **Jose Alberto Arriaga Ramos**

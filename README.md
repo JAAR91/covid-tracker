@@ -26,7 +26,7 @@ Flag pictures are from website [www.countryflags.io](https://www.countryflags.io
 ## Deployment Live Demo
 
 Deployed with Heroku
-  - [Live Demo](https://61f887fcb08e564cf80514ba--jovial-dubinsky-361cae.netlify.app/)
+  - [Live Demo](https://jaar-covid-tracker.netlify.app)
 
 ## Getting Started
 

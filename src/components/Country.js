@@ -2,14 +2,12 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import ReactCountryFlag from 'react-country-flag';
+import countryCode from '../countryName';
 import noFlag from '../img/no_flag.png';
-
-const Countries = require('country-state-city').Country;
 
 const Country = (props) => {
   const { country, index } = props;
-  const countryInfo = Countries.getAllCountries()
-    .find((c) => c.name === country.name);
+
   return (
     <Link
       to={`/country/${country.id}`}
@@ -21,10 +19,10 @@ const Country = (props) => {
       <div
         className="d-flex flex-row justify-content-between m-0 p-0 text-decoration-none align-items-center"
       >
-        {countryInfo
+        {countryCode[country.name]
           ? (
             <ReactCountryFlag
-              countryCode={countryInfo.isoCode}
+              countryCode={countryCode[country.name]}
               svg
               style={{
                 width: '4em',
@@ -33,7 +31,7 @@ const Country = (props) => {
             />
           )
           : (
-            <img alt="" src={noFlag} style={{ width: '4rem' }} />
+            <img alt="" src={noFlag} style={{ width: '4rem', height: '4rem' }} />
           )}
         <div className="text-end m-0 p-0">
           <BsArrowRightCircle />

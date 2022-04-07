@@ -3,7 +3,6 @@ import Loading from './Loading';
 
 const CountryList = (props) => {
   const { countries, filter } = props;
-
   let ans = (<Loading />);
 
   if (countries) {

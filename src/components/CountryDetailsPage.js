@@ -4,8 +4,7 @@ import ReactCountryFlag from 'react-country-flag';
 import Loading from './Loading';
 import CityList from './cityList';
 import noFlag from '../img/no_flag.png';
-
-const Countries = require('country-state-city').Country;
+import countryCode from '../countryName';
 
 function Details() {
   const params = useParams();
@@ -13,8 +12,6 @@ function Details() {
   const { countries, dataDate } = useSelector((state) => state);
   const country = countries ? Object.values(countries).find((country) => country.id === id) : null;
 
-  const countryInfo = Countries.getAllCountries()
-    .find((c) => c.name === country.name);
   return (
     <>
       {
@@ -23,14 +20,14 @@ function Details() {
             <div className="row light-magenta m-0">
               <p className="text-white m-0 text-center">{`To date: ${dataDate}`}</p>
               <div className="col-12 text-white d-flex py-2 justify-content-center align-items-center">
-                {countryInfo
+                {countryCode[country.name]
                   ? (
                     <ReactCountryFlag
-                      countryCode={countryInfo.isoCode}
+                      countryCode={countryCode[country.name]}
                       svg
                       style={{
                         width: '4em',
-                        height: '4rem',
+                        height: '4em',
                       }}
                     />
                   )
